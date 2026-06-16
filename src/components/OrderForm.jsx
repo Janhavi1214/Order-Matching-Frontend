@@ -15,13 +15,12 @@ function OrderForm({onOrderPlaced}){
                 body: JSON.stringify({type, price: parseFloat(price), quantity: parseInt(quantity)})
             });
             const orders = await response.json();
-            setOrders(orders);
             console.log(orders);
+            onOrderPlaced();
         } catch(error){
             console.log("Eror: ", error);
         }
     }
-    onOrderPlaced();
 
 
     return(
@@ -44,30 +43,10 @@ function OrderForm({onOrderPlaced}){
                 onChange={(e) => setQuantity(e.target.value)}
                 placeholder="Enter Quantity" />
 
-            <button type="button">Place Order</button>
+            <button type="button" onClick={handleSubmit}>Place Order</button>
         </div>
     )
 }
 
 export default OrderForm 
 
-/**
- * async function placeOrder(type, price, quantity) {
-  try {
-    const response = await fetch('http://localhost:8080/api/v1/orders', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ type, price, quantity })
-    });
-    
-    const trades = await response.json();
-    console.log("Trades executed:", trades);
-  } catch (error) {
-    console.log("Error:", error);
-  }
-}
-
-placeOrder('BUY', 100.0, 5);
- */

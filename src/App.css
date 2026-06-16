@@ -1,0 +1,113 @@
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.app h1 {
+  color: #00ff88;
+  font-size: 24px;
+  letter-spacing: 3px;
+  border-bottom: 1px solid #00ff88;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* ORDER FORM */
+.Order-Form {
+  background: #0d1221;
+  border: 1px solid #1e2d40;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.Order-Form h2 {
+  color: #00ff88;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.Order-Form select,
+.Order-Form input {
+  background: #0a0e1a;
+  border: 1px solid #1e2d40;
+  color: #e0e0e0;
+  padding: 8px 12px;
+  margin-right: 10px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.Order-Form select:focus,
+.Order-Form input:focus {
+  outline: none;
+  border-color: #00ff88;
+}
+
+.Order-Form button {
+  background: #00ff88;
+  color: #0a0e1a;
+  border: none;
+  padding: 8px 20px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.Order-Form button:hover {
+  background: #00cc6a;
+}
+
+/* TABLES */
+.ordersTable,
+.tradesTable {
+  background: #0d1221;
+  border: 1px solid #1e2d40;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.ordersTable h2,
+.tradesTable h2 {
+  color: #00ff88;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+th {
+  color: #4a5568;
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid #1e2d40;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 11px;
+}
+
+td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #0f1729;
+  color: #a0aec0;
+}
+
+tr:hover td {
+  background: #111827;
+  color: #e0e0e0;
+}

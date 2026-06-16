@@ -1,5 +1,8 @@
 import './App.css'
 import { useState, useEffect} from 'react'
+import OrderForm from './components/OrderForm'
+import OrdersTable from './components/OrdersTable'
+import TradesTable from './components/TradesTable'
 
 function App() {
 
@@ -35,8 +38,9 @@ function App() {
   return (
     <div className="app">
       <h1>Order Matching Engine</h1>
-      <p>Orders loaded: {orders.length}</p>
-      <p>Trades loaded: {trades.length}</p>
+      <OrderForm onOrderPlaced={() => {fetchOrders(); fetchTrades();}} />
+      <OrdersTable orders={orders} />
+      <TradesTable trades={trades} />
     </div>
   )
 }
