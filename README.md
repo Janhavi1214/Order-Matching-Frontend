@@ -1,16 +1,31 @@
-# React + Vite
+## Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Built with **Vite + React** — a dark Bloomberg Terminal-style admin dashboard.
 
-Currently, two official plugins are available:
+**Features:**
+- Place BUY/SELL limit orders via form
+- Live orders table with color-coded types (green/red) and status
+- Trade execution feed showing all matched orders
+- Auto-refreshes after every order placement
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Tech:**
+| Layer | Technology |
+|-------|------------|
+| Framework | React 18 |
+| Build Tool | Vite |
+| Styling | Custom CSS (terminal aesthetic) |
+| API Integration | Fetch API with async/await |
 
-## React Compiler
+**Running the frontend:**
+```bash
+cd trading-engine-frontend
+npm install
+npm run dev
+```
+Open `http://localhost:5173`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+> Make sure the Spring Boot backend is running on port 8080 before starting the frontend.
 
-## Expanding the ESLint configuration
+## Screenshots
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![Trading Terminal](screenshots/dashboard.png)
