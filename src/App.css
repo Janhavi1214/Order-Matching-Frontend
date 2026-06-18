@@ -111,3 +111,9 @@ tr:hover td {
   background: #111827;
   color: #e0e0e0;
 }
+
+.buy-type { color: #00ff88; font-weight: bold; }
+.sell-type { color: #ff4444; font-weight: bold; }
+.status-filled { color: #00ff88; }
+.status-partial { color: #f6ad55; }
+.status-open { color: #4a5568; }

@@ -17,10 +17,18 @@ function OrdersTable({orders}){
                         {orders.map((order) => (
                             <tr key={order.id}>
                                 <td>{order.id}</td>
-                                <td>{order.type}</td>
+                                <td className={order.type === 'BUY' ? 'buy-type' : 'sell-type'}>
+                                    {order.type}
+                                </td>
                                 <td>{order.price}</td>
                                 <td>{order.quantity}</td>
-                                <td>{order.status}</td>
+                                <td className={
+                                    order.status === 'FILLED' ? 'status-filled' :
+                                        order.status === 'PARTIALLY_FILLED' ? 'status-partial' :
+                                            'status-open'
+                                    }>
+                                    {order.status}
+                                </td>
                                 <td>{order.createdAt}</td>
                             </tr>
                         ))}
